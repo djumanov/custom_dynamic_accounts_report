@@ -65,13 +65,13 @@ class TrialBalance extends owl.Component {
             var today = new Date();
             var startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
             var endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
-            self.state.data = await self.orm.call("account.trial.balance", "view_report", []);
+            self.state.data = await self.orm.call("account.trial.balance", "view_custom_report", []);
             self.start_date.el.value = startOfMonth.getFullYear() + '-' + String(startOfMonth.getMonth() + 1).padStart(2, '0') + '-' + String(startOfMonth.getDate()).padStart(2, '0');
             self.end_date.el.value = endOfMonth.getFullYear() + '-' + String(endOfMonth.getMonth() + 1).padStart(2, '0') + '-' + String(endOfMonth.getDate()).padStart(2, '0');
             self.state.date_viewed.push(monthNamesShort[today.getMonth()] + '  ' + today.getFullYear())
             self.state.journals = self.state.data[1]['journal_ids']
             self.state.accounts = self.state.data[0]
-            console.log(self.state.data);
+            console.log(self.state.data)
             $.each(self.state.data, function (index, value) {
                 self.state.journals = value.journal_ids
             });

@@ -381,16 +381,16 @@
                                                         <t t-esc="account['initial_total_credit']"/>
                                                     </th>
                                                     <th style="text-align:center;">
-                                                        <t t-esc="account['end_total_debit']"/>
-                                                    </th>
-                                                    <th style="text-align:center;">
-                                                        <t t-esc="account['end_total_credit']"/>
-                                                    </th>
-                                                    <th style="text-align:center;">
                                                         <t t-esc="account['total_debit']"/>
                                                     </th>
                                                     <th style="text-align:center;">
                                                         <t t-esc="account['total_credit']"/>
+                                                    </th>
+                                                    <th style="text-align:center;">
+                                                        <t t-esc="account['end_total_debit']"/>
+                                                    </th>
+                                                    <th style="text-align:center;">
+                                                        <t t-esc="account['end_total_credit']"/>
                                                     </th>
                                                 </tr>
                                             </t>
